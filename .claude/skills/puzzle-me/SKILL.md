@@ -145,9 +145,10 @@ totalt. Ligger du över, stryk.
   Desktop-inspelning beskärd till 9:16 ser alltid fel ut.
 - **Scrolla långsamt.** Bygget har entré-animationer på sektionsfönster. Far du förbi
   hinner de inte spela och det ser trasigt ut. Ungefär halva hastigheten av normal scroll.
-- **Bokningspopupen dyker upp efter cirka 10 sekunder** på våra scroll-demos. Antingen
-  gör du den till en poäng i klippet, eller så startar du inspelningen om och håller dig
-  under 10 sekunder per tagning. Låt den inte bara glida in oförklarat.
+- **Kolla om bygget har en tidsstyrd popup** innan du spelar in (`grep -c "nudge-popup"`).
+  Élara/klinik-demos har en bokningspopup som slår in efter cirka 10 sekunder, medan
+  bygg-facit (`cloud/bygg/`) inte har någon. Finns den: gör den till en poäng i klippet
+  eller håll tagningarna under 10 sekunder. Låt den inte glida in oförklarat.
 - **Ladda sidan färdigt en gång innan du spelar in** så loopar och bilder ligger i cache.
   Annars fångar du en halvladdad sida.
 - **Ljud:** spela in voiceover separat i ett tyst rum, lägg på i efterhand. Tala inte
