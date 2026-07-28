@@ -1,5 +1,5 @@
 ---
-name: bygge-till-reel
+name: puzzle-me
 description: Use when the user hands over a build (HTML-fil, mall, template, demo, sida) and wants it directed at the bygg/hantverk-nischen och deras smärta, och sedan ett reel-paket för att visa upp jobbet. Trigger på "här är ett bygge", "dirigera bygget", "nischa bygget", "anpassa mallen till nischen", "gör om den till bygg/hantverk", "gör den till en lösning för dom", "ge mig reel-script för bygget", "hur ska vi filma det här", "lägg upp vårt jobb".
 argument-hint: [sökväg till bygget + ev. trade/kund, t.ex. "bahkobyra/cloud/nyfirma/index.html tak Solna"]
 ---

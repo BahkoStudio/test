@@ -1,6 +1,6 @@
 # Nisch-referens — bygg & hantverk (smärta, ord, bevis, reel-vinklar)
 
-Stödfil till `bygge-till-reel`. Laddas när skillen körs. Här bor allt som är
+Stödfil till `puzzle-me`. Laddas när skillen körs. Här bor allt som är
 *nisch-kunskap* (vad som faktiskt gör ont och vilka ord som funkar). Själva
 arbetsordningen bor i `SKILL.md`.
 
