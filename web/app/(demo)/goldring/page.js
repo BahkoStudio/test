@@ -7,7 +7,9 @@ import styles from './goldring.module.css';
    Lead: instagram.com/goldringbygg · Kågeröd, nordvästra Skåne · har hemsida
    (goldring.se, WordPress/Yoast på one.com — ett rutnät av stad × tjänst-
    sidor med samma text) — förslaget är en förbättring, inte en första sida.
-   Byggd på golvvision-kanon (modulerna 2026-09-06), via andrens (samma nisch).
+   Byggd på golvvision-kanon (modulerna 2026-09-06) i alltfix-utförandet
+   (senaste demon, 2026-09-14): konturstjärnor på exempelkorten, Google-raden
+   säger var betyget hamnar. Copy-stommen via andrens (samma nisch).
 
    Bärande idé: ett bygge är många yrken, men kunden ska bara behöva ringa
    ett nummer. Firmans egna ord: "snickeri, hantverk, projektledning och
@@ -39,7 +41,8 @@ import styles from './goldring.module.css';
    en kontaktperson) plus registrets startår 2021 — Alexander ska bekräfta
    löftena innan demon skickas.
 
-   OMDÖMESMODULEN i exempelläge: tre kort märkta Exempel. Inget betyg.
+   OMDÖMESMODULEN i exempelläge: tre kort märkta Exempel, stjärnorna i kontur
+   (inget betyg påstås), knappen går till en Maps-sökning på firmanamnet.
 
    MEDIA: Lån-läget, 0 credits. Hero, Varför oss-film, före/efter och makro
    är altanserien från rskompakt (Seedance/nano_banana, samma subjekt hela
@@ -160,10 +163,11 @@ const VARFOR = [
   'Är det ett jobb för en ensam snickare säger vi det. Då betalar du inte för projektledning du inte behöver.',
 ];
 
+/* Inga riktiga omdömen hittade — exempelläge, märkt. */
 const OMDOMEN = [
-  { namn: 'Exempel', text: 'Så här ser ett omdöme ut när det står här: kort, med förnamn och ort, hämtat från er Google-profil.' },
-  { namn: 'Exempel', text: 'Kunden skriver vad som byggdes, hur det gick och om tidplanen höll. Det är den sortens text som säljer.' },
-  { namn: 'Exempel', text: 'Tre till fem riktiga räcker. Ett påhittat är värre än inget — därför står det Exempel här.' },
+  { namn: 'Exempel', ort: 'Villaägare, Helsingborg', text: 'Exempel: här står ett riktigt omdöme från en kund, med namn och ort som de själva skrivit det.' },
+  { namn: 'Exempel', ort: 'Altanbygge, Svalöv', text: 'Exempel: ett andra kort, hämtat ur er Google-profil när den är på plats.' },
+  { namn: 'Exempel', ort: 'Takbyte, Ängelholm', text: 'Exempel: ett tredje kort. Tre riktiga omdömen räcker för att sidan ska kännas sann.' },
 ];
 
 const FRAGOR = [
@@ -177,8 +181,8 @@ const FRAGOR = [
   { q: 'Hur kommer jag igång?', a: 'Ring, eller skriv några rader om vad du vill bygga. Du får svar inom en arbetsdag och ett kostnadsfritt hembesök när det passar dig.' },
 ];
 
-const Stjarnor = () => (
-  <span className={styles.stjarnor} role="img" aria-label="Fem stjärnor">
+const Stjarnor = ({ tom }) => (
+  <span className={`${styles.stjarnor}${tom ? ` ${styles.stjarnorTomma}` : ''}`} role="img" aria-label={tom ? 'Stjärnor, exempel' : 'Fem stjärnor'}>
     {[0, 1, 2, 3, 4].map((i) => (
       <svg viewBox="0 0 24 24" aria-hidden="true" key={i}><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z" /></svg>
     ))}
@@ -332,19 +336,19 @@ export default function GoldringDemo() {
           <div className={styles.sekHuvud}>
             <p className={styles.eyebrow}>Omdömen</p>
             <h2 className={styles.h2}>Vad kunderna säger</h2>
-            <p className={styles.googleRad}><GoogleG className={styles.googleG} /><span>Google-recensioner</span></p>
+            <p className={styles.googleRad}><GoogleG className={styles.googleG} /><span>Här står ert Google-betyg när profilen är på plats</span></p>
           </div>
           <div className={styles.recensioner}>
             {OMDOMEN.map((o, i) => (
               <figure className={styles.recension} key={i}>
-                <div className={styles.recensionHuvud}><span className={styles.avatar} aria-hidden="true">E</span><figcaption><b>{o.namn}</b><span>Byts mot ett riktigt omdöme</span></figcaption><GoogleG className={styles.recensionG} /></div>
-                <Stjarnor /><blockquote>{o.text}</blockquote>
+                <div className={styles.recensionHuvud}><span className={styles.avatar} aria-hidden="true">E</span><figcaption><b>{o.namn}</b><span>{o.ort}</span></figcaption></div>
+                <Stjarnor tom /><blockquote>{o.text}</blockquote>
               </figure>
             ))}
           </div>
           <div className={styles.recensionerFot}>
-            <p className={styles.recensionerNot}>Exempel — byts mot era riktiga Google-recensioner när profilen är på plats.</p>
-            <a className={`${styles.btn} ${styles.btnMork}`} href="https://www.google.com/search?q=Goldring+Bygg+%26+Entreprenad+AB+K%C3%A5ger%C3%B6d" target="_blank" rel="noopener">Se alla recensioner</a>
+            <p className={styles.recensionerNot}>Exempel — byts mot era riktiga omdömen. Inget betyg påstås förrän det finns.</p>
+            <a className={`${styles.btn} ${styles.btnMork}`} href="https://www.google.com/maps/search/Goldring+Bygg+%26+Entreprenad+AB+K%C3%A5ger%C3%B6d" target="_blank" rel="noopener">Se alla recensioner</a>
           </div>
         </div>
       </section>

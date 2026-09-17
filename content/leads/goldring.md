@@ -3,7 +3,7 @@
 **Instagram:** [@goldringbygg](https://www.instagram.com/goldringbygg/) — 68 inlägg, 487 följare, riktiga jobb med hög finish (trädäck, poolrum, attefallshus, takisolering, glasfasad). Följs av bl.a. Bromma Trädgårdsservice (vår kund), Duofix AB, Fasadum.
 **Hemsida:** [goldring.se](https://www.goldring.se/) (WordPress + Yoast på one.com) — förslaget är en förbättring, inte en första sida.
 **Demo:** `bahkobyra.se/goldring/` (källa: `web/app/(demo)/goldring/`) — ligger tills vidare på test-repots gren `claude/goldring-lead-7z3tcv`, inte i BahkoByra.
-**Status:** demo byggd 2026-09-17 på golvvision-kanon (via andrens, samma nisch). Lån-läget, 0 credits för media. Inte skickad. Inkom via Instagram, Mathias skärmdump.
+**Status:** demo byggd 2026-09-17 på golvvision-kanon i alltfix-utförandet (senaste demon 2026-09-14: konturstjärnor på exempelkorten), copy-stomme via andrens (samma nisch). Lån-läget, 0 credits för media. Inte skickad. Inkom via Instagram, Mathias skärmdump.
 
 ## Verifierat (2026-09-17)
 

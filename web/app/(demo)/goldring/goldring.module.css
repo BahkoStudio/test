@@ -1,6 +1,7 @@
 /* ===========================================================================
    GOLDRING BYGG & ENTREPRENAD AB — palett och typografi
-   Kopia av golvvision-kanon (2026-09-06), via andrens (samma nisch). Kundens
+   Kopia av golvvision-kanon (2026-09-06) i alltfix-utförandet (2026-09-14:
+   konturstjärnor på exempelkort, mer luft under loggan), via andrens. Kundens
    märke är guld på vitt (hus med löv i skorstenen, ordmärke i mörkgrått), så
    canvasen är ett varmt sotsvart, accenten är märkets eget guld och den ljusa
    ytan är sand i stället för grå. Upptaget i biblioteket: mässing på kalksten
@@ -2168,4 +2169,16 @@ a.kontaktRad b {
       var(--ink) 100%
     );
   }
+}
+
+/* ---------- Alltfix-utförandet (2026-09-14) ----------
+   Mer luft mellan märket och tjänsteraden, som i de senaste demos. */
+.heroLager .heroTjanster {
+  margin: 0.8rem 0 0;
+}
+/* Exempelkort: stjarnorna omarkerade (kontur), sa inget betyg pastas. */
+.stjarnorTomma svg {
+  fill: none;
+  stroke: #9AA0A6;
+  stroke-width: 1.4;
 }
